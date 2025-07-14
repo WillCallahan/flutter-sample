@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_sample/models/diet_model.dart';
 import 'package:flutter_sample/widgets/diet_recommendation.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   group('DietRecommendation Tests', () {

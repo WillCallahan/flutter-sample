@@ -66,10 +66,10 @@ class DietRecommendation extends StatelessWidget {
                         gradient: LinearGradient(
                           colors: [
                             diet.viewIsSelected
-                                ? Color(0xff9DCEFF)
+                                ? const Color(0xff9DCEFF)
                                 : Colors.transparent,
                             diet.viewIsSelected
-                                ? Color(0xff92A3FD)
+                                ? const Color(0xff92A3FD)
                                 : Colors.transparent,
                           ],
                         ),
@@ -81,7 +81,7 @@ class DietRecommendation extends StatelessWidget {
                           style: TextStyle(
                             color: diet.viewIsSelected
                                 ? Colors.white
-                                : Color(0xffC588F2),
+                                : const Color(0xffC588F2),
                             fontWeight: FontWeight.w600,
                           ),
                         ),

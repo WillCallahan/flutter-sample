@@ -27,7 +27,7 @@ class DietModel {
         level: "Easy",
         duration: "30mins",
         calorie: "2000 kcal",
-        boxColor: Color(0xff92A3FD),
+        boxColor: const Color(0xff92A3FD),
         viewIsSelected: true
       ),
       DietModel(
@@ -36,7 +36,7 @@ class DietModel {
         level: "Intermediate",
         duration: "6 weeks",
         calorie: "2000 kcal",
-        boxColor: Color(0xffC58BF2)
+        boxColor: const Color(0xffC58BF2)
       ),
       DietModel(
         name: "Orange Snacks",
@@ -44,7 +44,7 @@ class DietModel {
         level: "Beginner",
         duration: "3 weeks",
         calorie: "1800 kcal",
-        boxColor: Color(0xff92A3FD)
+        boxColor: const Color(0xff92A3FD)
       ),
     ];
   }

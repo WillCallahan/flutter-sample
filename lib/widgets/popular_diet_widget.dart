@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sample/models/popular_diet.dart';
 import 'package:flutter_svg/svg.dart';
@@ -15,8 +14,8 @@ class PopularDietWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.only(left: 25),
+        const Padding(
+          padding: EdgeInsets.only(left: 25),
           child: Text(
             'Popular',
             style: TextStyle(
@@ -26,7 +25,7 @@ class PopularDietWidget extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 15),
+        const SizedBox(height: 15),
         ListView.separated(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
@@ -40,7 +39,7 @@ class PopularDietWidget extends StatelessWidget {
                 borderRadius: BorderRadius.circular(16),
                 boxShadow: [
                   BoxShadow(
-                    color: Color(0xff1D1617).withValues(alpha: 0.3),
+                    color: const Color(0xff1D1617).withValues(alpha: 0.3),
                     offset: const Offset(0, 10),
                     blurRadius: 20,
                     spreadRadius: 0,
@@ -82,7 +81,7 @@ class PopularDietWidget extends StatelessWidget {
           separatorBuilder: (context, index) => const SizedBox(height: 25),
           itemCount: popularDiets.length,
         ),
-        SizedBox(height: 15),
+        const SizedBox(height: 15),
       ],
     );
   }

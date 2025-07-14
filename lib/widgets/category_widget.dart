@@ -24,14 +24,14 @@ class FoodCategory extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 15),
+        const SizedBox(height: 15),
         SizedBox(
           height: 150,
           child: ListView.separated(
             itemCount: categories.length,
             scrollDirection: Axis.horizontal,
-            padding: EdgeInsets.only(left: 20, right: 20),
-            separatorBuilder: (context, index) => SizedBox(width: 25),
+            padding: const EdgeInsets.only(left: 20, right: 20),
+            separatorBuilder: (context, index) => const SizedBox(width: 25),
             itemBuilder: (context, index) {
               return Container(
                 width: 100,
@@ -45,7 +45,7 @@ class FoodCategory extends StatelessWidget {
                     Container(
                       width: 50,
                       height: 50,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Colors.white,
                         shape: BoxShape.circle,
                       ),
@@ -57,7 +57,7 @@ class FoodCategory extends StatelessWidget {
                     Text(
                       categories[index].name,
                       textAlign: TextAlign.center,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontWeight: FontWeight.w500,
                         color: Colors.black,
                         fontSize: 14,

@@ -13,7 +13,7 @@ class SearchField extends StatelessWidget {
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
-            color: Color(0xff1D1617).withValues(alpha: 0.11),
+            color: const Color(0xff1D1617).withValues(alpha: 0.11),
             blurRadius: 20,
             spreadRadius: 0.0,
           ),
@@ -46,7 +46,7 @@ class SearchField extends StatelessWidget {
                     thickness: 0.1,
                   ),
                   Padding(
-                    padding: EdgeInsets.all(12),
+                    padding: const EdgeInsets.all(12),
                     child: SvgPicture.asset(Assets.icons.filter),
                   ),
                 ],
