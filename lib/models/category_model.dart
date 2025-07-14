@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import '../constants/assets.dart';
+
 class CategoryModel {
   String name;
   String iconPath;
@@ -15,22 +17,22 @@ class CategoryModel {
     return [
       CategoryModel(
         name: 'Salad',
-        iconPath: 'assets/icons/plate.svg',
+        iconPath: Assets.icons.plate,
         boxColor: Color(0xff92A3FD),
       ),
       CategoryModel(
         name: 'Pancake',
-        iconPath: 'assets/icons/pancakes.svg',
+        iconPath: Assets.icons.pancakes,
         boxColor: Color(0xffC58BF2),
       ),
       CategoryModel(
         name: 'Pie',
-        iconPath: 'assets/icons/pie.svg',
+        iconPath: Assets.icons.pie,
         boxColor: Color(0xff92A3FD),
       ),
       CategoryModel(
         name: 'Blueberry Pancake',
-        iconPath: 'assets/icons/blueberry-pancake.svg',
+        iconPath: Assets.icons.blueberryPancake,
         boxColor: Color(0xffC58BF2),
       ),
     ];

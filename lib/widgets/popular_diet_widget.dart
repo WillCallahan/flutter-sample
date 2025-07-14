@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sample/models/popular_diet.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../constants/assets.dart';
+
 class PopularDietWidget extends StatelessWidget {
   const PopularDietWidget({required this.popularDiets, super.key});
 
@@ -70,7 +72,7 @@ class PopularDietWidget extends StatelessWidget {
                     ],
                   ),
                   GestureDetector(
-                    child: SvgPicture.asset('assets/icons/button.svg'),
+                    child: SvgPicture.asset(Assets.icons.button),
                     onTap: () {},
                   ),
                 ],

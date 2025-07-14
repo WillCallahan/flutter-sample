@@ -5,6 +5,7 @@ import 'package:flutter_sample/widgets/popular_diet_widget.dart';
 import 'package:flutter_sample/widgets/search_field.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import '../constants/assets.dart';
 import '../models/diet_model.dart';
 import '../models/popular_diet.dart';
 import '../widgets/diet_recommendation.dart';
@@ -57,7 +58,7 @@ AppBar appBar() => AppBar(
         borderRadius: BorderRadius.circular(10),
       ),
       child: SvgPicture.asset(
-        'assets/icons/Arrow - Left 2.svg',
+        Assets.icons.arrowLeft2,
         height: 20,
         width: 20,
       ),
@@ -74,7 +75,7 @@ AppBar appBar() => AppBar(
           color: const Color(0xffF7F8F8),
           borderRadius: BorderRadius.circular(10),
         ),
-        child: SvgPicture.asset('assets/icons/dots.svg', height: 5, width: 5),
+        child: SvgPicture.asset(Assets.icons.dots, height: 5, width: 5),
       ),
     ),
   ],

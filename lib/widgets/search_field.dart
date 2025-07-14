@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../constants/assets.dart';
+
 class SearchField extends StatelessWidget {
   const SearchField({super.key});
 
@@ -29,7 +31,7 @@ class SearchField extends StatelessWidget {
           ),
           prefixIcon: Padding(
             padding: const EdgeInsets.all(12),
-            child: SvgPicture.asset('assets/icons/Search.svg'),
+            child: SvgPicture.asset(Assets.icons.search),
           ),
           suffixIcon: SizedBox(
             width: 100,
@@ -45,7 +47,7 @@ class SearchField extends StatelessWidget {
                   ),
                   Padding(
                     padding: EdgeInsets.all(12),
-                    child: SvgPicture.asset('assets/icons/Filter.svg'),
+                    child: SvgPicture.asset(Assets.icons.filter),
                   ),
                 ],
               ),

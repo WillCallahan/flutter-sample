@@ -1,3 +1,5 @@
+import '../constants/assets.dart';
+
 class PopularDiet {
   String name;
   String iconPath;
@@ -19,7 +21,7 @@ class PopularDiet {
     return [
       PopularDiet(
         name: 'Blueberry Pancake',
-        iconPath: 'assets/icons/blueberry-pancake.svg',
+        iconPath: Assets.icons.blueberryPancake,
         level: 'Intermediate',
         duration: '4 weeks',
         calorie: '2000 kcal',
@@ -27,7 +29,7 @@ class PopularDiet {
       ),
       PopularDiet(
         name: 'Salmon Nigiri',
-        iconPath: 'assets/icons/salmon-nigiri.svg',
+        iconPath: Assets.icons.salmonNigiri,
         level: 'Beginner',
         duration: '6 weeks',
         calorie: '1800 kcal',
@@ -35,7 +37,7 @@ class PopularDiet {
       ),
       PopularDiet(
         name: 'Orange Snacks',
-        iconPath: 'assets/icons/orange-snacks.svg',
+        iconPath: Assets.icons.orangeSnacks,
         level: 'Advanced',
         duration: '8 weeks',
         calorie: '2200 kcal',
@@ -43,7 +45,7 @@ class PopularDiet {
       ),
       PopularDiet(
         name: 'Canai Break',
-        iconPath: 'assets/icons/canai-bread.svg',
+        iconPath: Assets.icons.canaiBread,
         level: 'Intermediate',
         duration: '5 weeks',
         calorie: '2500 kcal',
