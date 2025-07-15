@@ -1,9 +1,4 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-name: Dart Test
+name: Flutter CI
 
 on:
   push:
@@ -12,26 +7,77 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build-test:
+    name: Build, Test, and Coverage
     runs-on: ubuntu-latest
 
     steps:
-      - name: Clone repository
+      # Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
-        
+
+      # Set up Flutter
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: stable
           flutter-version: 3.32.4
-          
-      - run: flutter --version
 
+      - name: Flutter version
+        run: flutter --version
+
+      # Install dependencies
       - name: Install dependencies
         run: dart pub get
 
+      # Analyze project source
       - name: Analyze project source
         run: dart analyze
 
-      - name: Run tests
-        run: flutter test
+      # Install tojunit for test reporting
+      - name: Install tojunit
+        run: dart pub global activate tojunit
+
+      - name: Add Dart bin to PATH
+        run: echo "$HOME/.pub-cache/bin" >> $GITHUB_PATH
+
+      # Run tests with JUnit output
+      - name: Run tests and generate JUnit report
+        run: |
+          mkdir -p build/test-results
+          flutter test --machine \
+            | tojunit > build/test-results/results.xml
+
+      # Upload JUnit results as an artifact
+      - name: Upload Test Results Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: flutter-test-results
+          path: build/test-results/results.xml
+
+      # Publish test summary in GitHub Actions UI
+      - name: Publish Test Summary
+        uses: mikepenz/action-junit-report@v4
+        with:
+          report_paths: 'build/test-results/results.xml'
+
+      # Run tests with coverage
+      - name: Run tests with coverage
+        run: |
+          mkdir -p coverage
+          flutter test --coverage
+
+      # Upload coverage artifact (lcov.info)
+      - name: Upload Coverage Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: flutter-coverage-report
+          path: coverage/lcov.info
+
+      # Generate and publish coverage summary in GitHub UI
+      - name: Publish Coverage Summary
+        run: |
+          coverage=$(lcov --summary coverage/lcov.info | grep "lines" | awk '{print $2}')
+          echo "## Test Coverage Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Lines Covered:** $coverage" >> $GITHUB_STEP_SUMMARY
