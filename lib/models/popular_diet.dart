@@ -21,7 +21,7 @@ class PopularDiet {
     return [
       PopularDiet(
         name: 'Blueberry Pancake',
-        iconPath: Assets.icons.blueberryPancake,
+        iconPath: Assets.blueberryPancake,
         level: 'Intermediate',
         duration: '4 weeks',
         calorie: '2000 kcal',
@@ -29,7 +29,7 @@ class PopularDiet {
       ),
       PopularDiet(
         name: 'Salmon Nigiri',
-        iconPath: Assets.icons.salmonNigiri,
+        iconPath: Assets.salmonNigiri,
         level: 'Beginner',
         duration: '6 weeks',
         calorie: '1800 kcal',
@@ -37,7 +37,7 @@ class PopularDiet {
       ),
       PopularDiet(
         name: 'Orange Snacks',
-        iconPath: Assets.icons.orangeSnacks,
+        iconPath: Assets.orangeSnacks,
         level: 'Advanced',
         duration: '8 weeks',
         calorie: '2200 kcal',
@@ -45,7 +45,7 @@ class PopularDiet {
       ),
       PopularDiet(
         name: 'Canai Break',
-        iconPath: Assets.icons.canaiBread,
+        iconPath: Assets.canaiBread,
         level: 'Intermediate',
         duration: '5 weeks',
         calorie: '2500 kcal',

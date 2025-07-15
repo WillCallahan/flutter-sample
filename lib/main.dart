@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sample/pages/home.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const FlutterSample());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class FlutterSample extends StatelessWidget {
+  const FlutterSample({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Flutter Sample',
       theme: ThemeData(fontFamily: 'Lato'),
       home: const HomePage()
     );

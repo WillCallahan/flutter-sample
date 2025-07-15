@@ -71,7 +71,7 @@ class PopularDietWidget extends StatelessWidget {
                     ],
                   ),
                   GestureDetector(
-                    child: SvgPicture.asset(Assets.icons.button),
+                    child: SvgPicture.asset(Assets.button),
                     onTap: () {},
                   ),
                 ],

@@ -1,12 +1,14 @@
 import 'dart:ui';
 
+import '../constants/assets.dart';
+
 class DietModel {
-  String name;
-  String iconPath;
-  String level;
-  String duration;
-  String calorie;
-  Color boxColor;
+  final String name;
+  final String iconPath;
+  final String level;
+  final String duration;
+  final String calorie;
+  final Color boxColor;
   bool viewIsSelected;
 
   DietModel({
@@ -23,7 +25,7 @@ class DietModel {
     return [
       DietModel(
         name: "Honey Pancakes",
-        iconPath: "assets/icons/honey-pancakes.svg",
+        iconPath: Assets.honeyPancakes,
         level: "Easy",
         duration: "30mins",
         calorie: "2000 kcal",
@@ -32,7 +34,7 @@ class DietModel {
       ),
       DietModel(
         name: "Canai Bread",
-        iconPath: "assets/icons/canai-bread.svg",
+        iconPath: Assets.canaiBread,
         level: "Intermediate",
         duration: "6 weeks",
         calorie: "2000 kcal",
@@ -40,7 +42,7 @@ class DietModel {
       ),
       DietModel(
         name: "Orange Snacks",
-        iconPath: "assets/icons/orange-snacks.svg",
+        iconPath: Assets.orangeSnacks,
         level: "Beginner",
         duration: "3 weeks",
         calorie: "1800 kcal",

@@ -4,7 +4,9 @@ import 'package:flutter_svg/svg.dart';
 import '../constants/assets.dart';
 
 class SearchField extends StatelessWidget {
-  const SearchField({super.key});
+  final TextEditingController controller;
+
+  const SearchField({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -20,18 +22,16 @@ class SearchField extends StatelessWidget {
         ],
       ),
       child: TextField(
+        controller: controller,
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.white,
           contentPadding: const EdgeInsets.all(15),
-          hintText: 'Search Pancake',
-          hintStyle: const TextStyle(
-              color: Color(0xffDDDADA),
-              fontSize: 14
-          ),
+          hintText: 'Search',
+          hintStyle: const TextStyle(color: Color(0xffDDDADA), fontSize: 14),
           prefixIcon: Padding(
             padding: const EdgeInsets.all(12),
-            child: SvgPicture.asset(Assets.icons.search),
+            child: SvgPicture.asset(Assets.search),
           ),
           suffixIcon: SizedBox(
             width: 100,
@@ -47,7 +47,7 @@ class SearchField extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(12),
-                    child: SvgPicture.asset(Assets.icons.filter),
+                    child: SvgPicture.asset(Assets.filter),
                   ),
                 ],
               ),
