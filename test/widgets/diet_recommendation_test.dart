@@ -53,7 +53,6 @@ void main() {
           );
 
           // Find containers with gradient decoration
-          final selectedDiet = diets.firstWhere((diet) => diet.viewIsSelected);
           final containers = find.byType(Container);
 
           expect(containers, findsWidgets);

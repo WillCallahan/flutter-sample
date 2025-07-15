@@ -38,7 +38,7 @@ class DietRecommendation extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    SvgPicture.asset(diet.iconPath),
+                    SvgPicture.asset(diet.iconPath, height: 50, width: 50),
                     Column(
                       children: [
                         Text(
