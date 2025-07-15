@@ -35,8 +35,8 @@ jobs:
         run: dart analyze
 
       # Install tojunit for test reporting
-      - name: Install tojunit
-        run: dart pub global activate tojunit
+      - name: Install junitreport
+        run: dart pub global activate junitreport
 
       - name: Add Dart bin to PATH
         run: echo "$HOME/.pub-cache/bin" >> $GITHUB_PATH
